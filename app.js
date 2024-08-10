@@ -19,7 +19,7 @@ io.on('connection', client => {
        console.log('Cliente desconectado');
     });
 
-    client.on('livescores', (data) => {
+    client.on('custom-socket', (data) => {
       // Actualizar los datos en el cliente
       console.log(data);
     });
@@ -27,7 +27,7 @@ io.on('connection', client => {
 
 // Configurar tarea cron para emitir "hola mundo" en el evento livescores cada 5 segundos
 cron.schedule('*/5 * * * * *', () => {
-    io.emit('livescores', 'hola mundo');
+    io.emit('custom-socket', 'Hello World!!!');
 });
 
 server.listen(3000, () => {

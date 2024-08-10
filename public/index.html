@@ -21,13 +21,11 @@
             console.log('Desconectado del servidor');
         });
 
-        socket.on('livescores', function( payload ) {
-            console.log('Nuevo mensaje:', payload);
+        socket.on('custom-socket', function( payload ) {
+            console.log('message:', payload);
         });
 
-        // socket.on('active-bands', function( bands ) {
-        //     console.table(bands);
-        // });
+
 
     </script>
 
